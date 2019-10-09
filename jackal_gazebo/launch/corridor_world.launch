@@ -24,6 +24,10 @@
     <arg name="world_name" value="$(arg world_name)" />
   </include>
 
+  <!-- Launch Pedsim world -->
+  <include file="$(find pedsim_simulator)/launch/corridor.launch">
+  </include>
+
   <!-- Load Jackal's description, controllers, and teleop nodes. -->
   <include file="$(find jackal_description)/launch/description.launch">
     <arg name="config" value="$(arg config)" />
